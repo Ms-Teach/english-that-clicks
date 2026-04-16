@@ -6,67 +6,157 @@
   <title>Réservation – English That Clicks with Sabrina</title>
 
   <style>
-    body {
+    :root{
+      --black: #262521;
+      --teal: #8ebfc0;
+      --yellow: #e6d086;
+      --cream: #f4efe4;
+      --text: #2b2926;
+      --blue: #3e73b9;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #2b2926;
-      background: #f4efe4;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--yellow);
     }
 
-    header {
-      background: #262521;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-style: italic;
-      margin: 0;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
+    a{
+      color: inherit;
       text-decoration: none;
     }
 
-    .btn {
-      background: #8ebfc0;
-      padding: 10px 20px;
-      border-radius: 20px;
-      color: black;
+    .container{
+      width: min(1280px, 92%);
+      margin: 0 auto;
     }
 
-    .section {
-      padding: 60px;
+    header{
+      background: var(--black);
+      color: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .section h2 {
-      font-size: 40px;
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      min-height: 96px;
+    }
+
+    .brand{
+      font-size: clamp(1.6rem, 2.2vw, 2.3rem);
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    .nav-links{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .reserve-btn{
+      background: var(--teal);
+      color: var(--black);
+      padding: 1rem 2.2rem;
+      border-radius: 2rem 0 2rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    /* SECTION */
+    .section{
+      padding: 4.5rem 0;
+      text-align: center;
+    }
+
+    .section h2{
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section p{
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    iframe{
+      width: 100%;
+      height: 80vh;
+      border: none;
+      border-radius: 12px;
+      background: white;
+    }
+
+    /* WAVE */
+    .footer-wave-wrap{
+      margin-top: 3rem;
+      line-height: 0;
+    }
+
+    .footer-wave{
+      display: block;
+      width: 100%;
+      height: 120px;
+    }
+
+    /* FOOTER */
+    footer{
+      background: var(--black);
+      color: var(--cream);
+      padding: 2.2rem 0 2.8rem;
+    }
+
+    .footer-grid{
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: end;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand{
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.05;
+    }
+
+    .footer-contact{
+      text-align: right;
+      font-size: clamp(1.1rem, 2vw, 1.9rem);
+      line-height: 1.7;
+      font-weight: 700;
       font-style: italic;
     }
 
-    .section p {
-      font-size: 18px;
-      max-width: 600px;
-    }
+    @media (max-width: 980px){
+      .nav{
+        flex-direction: column;
+        padding: 1rem 0 1.4rem;
+      }
 
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
-      margin-top: 30px;
-    }
+      .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-    footer {
-      background: #262521;
-      color: white;
-      padding: 40px;
-      display: flex;
-      justify-content: space-between;
+      .footer-contact{
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -74,20 +164,23 @@
 <body>
 
 <header>
-  <h1>English That Clicks with Sabrina</h1>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="apropos.html">À propos</a>
-    <a href="reservation.html" class="btn">Réserver</a>
-  </nav>
+  <div class="container nav">
+    <a href="index.html" class="brand">English That Clicks with Sabrina</a>
+
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="apropos.html">À propos</a>
+      <a href="reservation.html" class="reserve-btn">Réserver</a>
+    </nav>
+  </div>
 </header>
 
-<section class="section">
+<section class="section container">
   <h2>Réserver une séance</h2>
   <p>
-    Remplissez ce formulaire pour débuter l’inscription.  
-    Vous pourrez ensuite choisir une date et une heure pour la séance.
+    Remplissez le formulaire ci-dessous pour débuter l’inscription.
+    Une fois qu'il sera complété, vous pourrez choisir une date et une heure pour la séance.
   </p>
 
   <iframe 
@@ -96,9 +189,24 @@
   </iframe>
 </section>
 
+<div class="footer-wave-wrap">
+  <svg class="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,40 C240,0 420,0 720,45 C1010,90 1180,95 1440,40 L1440,120 L0,120 Z" fill="#3e73b9"></path>
+    <path d="M0,55 C250,15 430,20 720,60 C1010,100 1180,105 1440,55 L1440,120 L0,120 Z" fill="#262521"></path>
+  </svg>
+</div>
+
 <footer>
-  <div>English That Clicks with Sabrina</div>
-  <div>sablap321@hotmail.com<br>(418) 860-7227</div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      English That Clicks<br>with Sabrina
+    </div>
+
+    <div class="footer-contact">
+      sablap321@hotmail.com<br>
+      (418) 860-7227
+    </div>
+  </div>
 </footer>
 
 </body>
