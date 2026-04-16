@@ -6,74 +6,167 @@
   <title>English That Clicks with Sabrina</title>
 
   <style>
-    body {
+    :root{
+      --black: #262521;
+      --teal: #8ebfc0;
+      --yellow: #e6d086;
+      --cream: #f4efe4;
+      --text: #2b2926;
+      --blue: #3e73b9;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif; /* MATCHED */
-      color: #2b2926;
-      background: #f4efe4;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--cream);
     }
 
-    header {
-      background: #262521;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-style: italic;
-      margin: 0;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
+    a{
+      color: inherit;
       text-decoration: none;
     }
 
-    .btn {
-      background: #8ebfc0;
-      padding: 10px 20px;
-      border-radius: 20px;
-      color: black;
+    .container{
+      width: min(1280px, 92%);
+      margin: 0 auto;
     }
 
-    /* HERO */
-    .hero {
-      height: 90vh;
+    header{
+      background: var(--black);
+      color: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      min-height: 96px;
+    }
+
+    .brand{
+      font-size: clamp(1.6rem, 2.2vw, 2.3rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .nav-links{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .reserve-btn{
+      background: var(--teal);
+      color: var(--black);
+      padding: 1rem 2.2rem;
+      border-radius: 2rem 0 2rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .hero{
+      min-height: calc(100vh - 96px);
       background: url("hero-bg.png") center/cover no-repeat;
     }
 
-    footer {
-      background: #262521;
-      color: white;
-      padding: 40px;
-      display: flex;
-      justify-content: space-between;
+    footer{
+      background: var(--black);
+      color: var(--cream);
+      padding: 2.2rem 0 2.8rem;
     }
 
+    .footer-grid{
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: end;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand{
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.05;
+      max-width: 360px;
+    }
+
+    .footer-contact{
+      text-align: right;
+      font-size: clamp(1.1rem, 2vw, 1.9rem);
+      line-height: 1.7;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    @media (max-width: 980px){
+      .nav{
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0 1.4rem;
+      }
+
+      .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero{
+        min-height: calc(100vh - 140px);
+      }
+
+      .footer-contact{
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px){
+      .brand{
+        text-align: center;
+      }
+    }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>English That Clicks with Sabrina</h1>
-  <nav>
-    <a href="services.html">Services</a>
-    <a href="apropos.html">À propos</a>
-    <a href="reservation.html" class="btn">Réserver</a>
-  </nav>
-</header>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">English That Clicks with Sabrina</a>
 
-<section class="hero"></section>
+      <nav class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="apropos.html">À propos</a>
+        <a href="reservation.html" class="reserve-btn">Réserver</a>
+      </nav>
+    </div>
+  </header>
 
-<footer>
-  <div>English That Clicks with Sabrina</div>
-  <div>sablap321@hotmail.com<br>(418) 860-7227</div>
-</footer>
+  <section class="hero"></section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        English That Clicks<br>with Sabrina
+      </div>
+
+      <div class="footer-contact">
+        sablap321@hotmail.com<br>
+        (418) 860-7227
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
