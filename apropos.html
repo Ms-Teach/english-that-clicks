@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos — English That Clicks with Sabrina</title>
 
+  <style>
+    :root{
+      --black: #262521;
+      --teal: #8ebfc0;
+      --yellow: #e6d086;
+      --cream: #f4efe4;
+      --text: #2b2926;
+      --blue: #3e73b9;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--yellow);
+    }
+
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container{
+      width: min(1280px, 92%);
+      margin: 0 auto;
+    }
+
+    header{
+      background: var(--black);
+      color: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      min-height: 96px;
+    }
+
+    .brand{
+      font-size: clamp(1.6rem, 2.2vw, 2.3rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .nav-links{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a.active{
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
+
+    .reserve-btn{
+      background: var(--teal);
+      color: var(--black);
+      padding: 1rem 2.2rem;
+      border-radius: 2rem 0 2rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .about-page{
+      padding: 3.5rem 0 0;
+      background: var(--yellow);
+      min-height: 100vh;
+    }
+
+    .about-grid{
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .big-title{
+      font-size: clamp(3rem, 6vw, 6rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 0.9;
+      margin: 0 0 1.5rem;
+      color: var(--black);
+    }
+
+    .text-block p{
+      font-size: 1rem;
+      line-height: 1.55;
+      margin: 0 0 1.25rem;
+      max-width: 640px;
+    }
+
+    .text-block strong{
+      font-weight: 700;
+    }
+
+    .portrait-wrap{
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .portrait-oval{
+      width: min(540px, 100%);
+      aspect-ratio: 0.82 / 1;
+      border-radius: 50% / 38%;
+      overflow: hidden;
+      background: #cfcfcf;
+    }
+
+    .portrait-oval img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .second-section{
+      margin-top: 2.2rem;
+      padding-bottom: 1rem;
+    }
+
+    .second-section p{
+      font-size: 1rem;
+      line-height: 1.55;
+      margin: 0 0 1.25rem;
+      max-width: 700px;
+    }
+
+    .footer-wave-wrap{
+      margin-top: 1.5rem;
+      line-height: 0;
+    }
+
+    .footer-wave{
+      display: block;
+      width: 100%;
+      height: 120px;
+    }
+
+    footer{
+      background: var(--black);
+      color: var(--cream);
+      padding: 2.2rem 0 2.8rem;
+    }
+
+    .footer-grid{
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: end;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand{
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.05;
+      max-width: 360px;
+    }
+
+    .footer-contact{
+      text-align: right;
+      font-size: clamp(1.1rem, 2vw, 1.9rem);
+      line-height: 1.7;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    @media (max-width: 980px){
+      .about-grid{
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-wrap{
+        order: -1;
+      }
+
+      .portrait-oval{
+        max-width: 460px;
+      }
+
+      .nav{
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0 1.4rem;
+      }
+
+      .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .footer-contact{
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px){
+      .brand{
+        text-align: center;
+      }
+
+      .big-title{
+        word-break: break-word;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">English That Clicks with Sabrina</a>
+
+      <nav class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="apropos.html" class="active">À propos</a>
+        <a href="index.html#contact" class="reserve-btn">Réserver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-page">
+    <div class="container">
+      <section class="about-grid">
+        <div class="text-block">
+          <h1 class="big-title">Qui suis-je?</h1>
+
+          <p>
+            Je suis une future enseignante d’anglais langue seconde, actuellement en fin de formation universitaire. Grâce à mes stages en milieu scolaire, j’ai acquis une expérience concrète auprès d’élèves du primaire et du secondaire, ce qui me permet de bien comprendre leurs réalités, leurs défis et leurs besoins.
+          </p>
+
+          <p>
+            Mon approche est à la fois structurée, bienveillante et adaptée à chaque élève. Mon objectif est d’aider votre enfant à mieux comprendre l’anglais, à gagner en confiance et à progresser à son rythme, que ce soit pour l’aide aux devoirs, la préparation aux examens ou le tutorat.
+          </p>
+
+          <p>
+            Avec <strong>English That Clicks</strong>, je souhaite offrir un accompagnement personnalisé, efficace et sans stress, pour que l’anglais devienne enfin plus clair… et qu’il « clique ».
+          </p>
+        </div>
+
+        <div class="portrait-wrap">
+          <div class="portrait-oval">
+            <img src="portrait.jpg" alt="Portrait de Sabrina">
+          </div>
+        </div>
+      </section>
+
+      <section class="second-section">
+        <h2 class="big-title">Apprendre devient<br>moins stressant</h2>
+
+        <p>
+          Chaque élève apprend différemment. C’est pourquoi j’accorde une grande importance à l’écoute, à l’adaptation et au rythme de chacun. Mon rôle n’est pas seulement d’expliquer la matière, mais aussi d’aider votre enfant à se sentir capable, compris et soutenu dans ses apprentissages.
+        </p>
+
+        <p>
+          Que votre enfant ait besoin d’un coup de pouce ponctuel ou d’un accompagnement plus régulier, je souhaite offrir un espace rassurant où il pourra poser ses questions, consolider ses bases et progresser avec confiance.
+        </p>
+      </section>
+    </div>
+
+    <div class="footer-wave-wrap">
+      <svg class="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C240,0 420,0 720,45 C1010,90 1180,95 1440,40 L1440,120 L0,120 Z" fill="#3e73b9"></path>
+        <path d="M0,55 C250,15 430,20 720,60 C1010,100 1180,105 1440,55 L1440,120 L0,120 Z" fill="#262521"></path>
+      </svg>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        English That Clicks<br>with Sabrina
+      </div>
+
+      <div class="footer-contact">
+        sablap321@hotmail.com<br>
+        (418) 860-7227
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
