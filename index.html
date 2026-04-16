@@ -77,8 +77,19 @@
     }
 
     .hero{
-      min-height: calc(100vh - 96px);
+      height: 90vh;
       background: url("hero-bg.png") center/cover no-repeat;
+    }
+
+    .footer-wave-wrap{
+      margin-top: 0;
+      line-height: 0;
+    }
+
+    .footer-wave{
+      display: block;
+      width: 100%;
+      height: 120px;
     }
 
     footer{
@@ -150,6 +161,13 @@
   </header>
 
   <section class="hero"></section>
+
+  <div class="footer-wave-wrap">
+    <svg class="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C240,0 420,0 720,45 C1010,90 1180,95 1440,40 L1440,120 L0,120 Z" fill="#3e73b9"></path>
+      <path d="M0,55 C250,15 430,20 720,60 C1010,100 1180,105 1440,55 L1440,120 L0,120 Z" fill="#262521"></path>
+    </svg>
+  </div>
 
   <footer>
     <div class="container footer-grid">
