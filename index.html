@@ -40,34 +40,10 @@
       color: black;
     }
 
-    /* HERO WITH YOUR IMAGE */
+    /* HERO */
     .hero {
       height: 90vh;
       background: url("hero-bg.png") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding: 60px;
-    }
-
-    .hero-text {
-      max-width: 600px;
-    }
-
-    .hero-text h2 {
-      font-size: 40px;
-    }
-
-    .hero-text p {
-      font-size: 18px;
-    }
-
-    .hero-text button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      border: 2px solid black;
-      border-radius: 20px;
-      background: transparent;
-      cursor: pointer;
     }
 
     /* SERVICES */
@@ -137,17 +113,13 @@
 <header>
   <h1>English That Clicks with Sabrina</h1>
   <nav>
-    <a href="#">Services</a>
-    <a href="#">À propos</a>
-    <a href="#" class="btn">Réserver</a>
+    <a href="services.html">Services</a>
+    <a href="apropos.html">À propos</a>
+    <a href="#contact" class="btn">Réserver</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <button>Commencer</button>
-  </div>
-</section>
+<section class="hero"></section>
 
 <section class="services">
   <h2>Services</h2>
@@ -155,7 +127,7 @@
   <div class="cards">
     <div class="card">
       <h3>Aide aux devoirs</h3>
-      <p>30 min — 15$<br>
+      <p>30 min — 15$</p>
     </div>
 
     <div class="card">
@@ -170,7 +142,7 @@
   </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <h2>Une question? Écrivez-moi!</h2>
 
   <input type="text" placeholder="Nom">
@@ -187,9 +159,3 @@
 
 </body>
 </html>
-
-<nav class="nav-links">
-  <a href="services.html">Services</a>
-  <a href="apropos.html">À propos</a>
-  <a href="#contact" class="reserve-btn">Réserver</a>
-</nav>
