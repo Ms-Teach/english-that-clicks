@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>English That Clicks with Sabrina</title>
 
+  <!-- Google Font (closer to your Squarespace style) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       color: #2b2926;
       background: #f4efe4;
     }
@@ -23,6 +26,7 @@
     }
 
     header h1 {
+      font-family: 'Playfair Display', serif;
       font-style: italic;
       margin: 0;
     }
@@ -31,6 +35,7 @@
       color: white;
       margin-left: 20px;
       text-decoration: none;
+      font-weight: 400;
     }
 
     .btn {
@@ -38,40 +43,43 @@
       padding: 10px 20px;
       border-radius: 20px;
       color: black;
+      font-weight: 500;
     }
 
     /* HERO */
     .hero {
       height: 90vh;
       background: url("hero-bg.png") center/cover no-repeat;
-    }
-
-    /* CONTACT */
-    .contact {
-      background: #e6d086;
+      display: flex;
+      align-items: center;
       padding: 60px;
     }
 
-    .contact h2 {
-      font-size: 40px;
-      font-style: italic;
+    .hero-text {
+      max-width: 600px;
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 10px;
-      border: 1px solid #999;
+    .hero-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 20px;
     }
 
-    button.submit {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 20px;
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* CTA button */
+    .cta-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 28px;
+      border: 2px solid black;
+      border-radius: 25px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
     }
 
     footer {
@@ -96,16 +104,17 @@
   </nav>
 </header>
 
-<section class="hero"></section>
+<section class="hero">
+  <div class="hero-text">
+    <h2>L’anglais qui clique</h2>
+    <p>
+      Des leçons personnalisées, efficaces et sans stress pour aider votre enfant à progresser à son rythme.
+    </p>
 
-<section class="contact" id="contact">
-  <h2>Une question? Écrivez-moi!</h2>
-
-  <input type="text" placeholder="Nom">
-  <input type="email" placeholder="E-mail">
-  <textarea placeholder="Message"></textarea>
-
-  <button class="submit">Envoyer</button>
+    <a href="reservation.html" class="cta-btn">
+      Réserver une séance
+    </a>
+  </div>
 </section>
 
 <footer>
@@ -114,4 +123,5 @@
 </footer>
 
 </body>
+</html>
 </html>
