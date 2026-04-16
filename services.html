@@ -1,1 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — English That Clicks with Sabrina</title>
 
+  <style>
+    :root{
+      --black: #262521;
+      --teal: #8ebfc0;
+      --yellow: #e6d086;
+      --cream: #f4efe4;
+      --text: #2b2926;
+      --blue: #3e73b9;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--yellow);
+    }
+
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container{
+      width: min(1280px, 92%);
+      margin: 0 auto;
+    }
+
+    header{
+      background: var(--black);
+      color: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      min-height: 96px;
+    }
+
+    .brand{
+      font-size: clamp(1.6rem, 2.2vw, 2.3rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .nav-links{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a.active{
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
+
+    .reserve-btn{
+      background: var(--teal);
+      color: var(--black);
+      padding: 1rem 2.2rem;
+      border-radius: 2rem 0 2rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .services-page{
+      padding: 4.5rem 0 0;
+      background: var(--yellow);
+      min-height: 100vh;
+    }
+
+    .page-title{
+      text-align: center;
+      font-size: clamp(2.8rem, 6vw, 5.6rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 0.95;
+      margin: 0 0 3rem;
+      color: var(--black);
+    }
+
+    .services-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: start;
+      text-align: center;
+    }
+
+    .service-card{
+      padding: 0 1rem 2rem;
+    }
+
+    .service-card img{
+      width: 100%;
+      max-width: 320px;
+      height: 320px;
+      object-fit: contain;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+
+    .service-card h2{
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0.5rem 0 1.2rem;
+      color: var(--black);
+    }
+
+    .price{
+      font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+      margin-bottom: 1.3rem;
+      color: var(--black);
+    }
+
+    .desc{
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .durations{
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-wave-wrap{
+      margin-top: 3rem;
+      line-height: 0;
+    }
+
+    .footer-wave{
+      display: block;
+      width: 100%;
+      height: 120px;
+    }
+
+    footer{
+      background: var(--black);
+      color: var(--cream);
+      padding: 2.2rem 0 2.8rem;
+    }
+
+    .footer-grid{
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: end;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand{
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.05;
+      max-width: 360px;
+    }
+
+    .footer-contact{
+      text-align: right;
+      font-size: clamp(1.1rem, 2vw, 1.9rem);
+      line-height: 1.7;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    @media (max-width: 980px){
+      .services-grid{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .service-card img{
+        height: 280px;
+      }
+
+      .nav{
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0 1.4rem;
+      }
+
+      .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .footer-contact{
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px){
+      .brand{
+        text-align: center;
+      }
+
+      .service-card h2{
+        word-break: break-word;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">English That Clicks with Sabrina</a>
+
+      <nav class="nav-links">
+        <a href="services.html" class="active">Services</a>
+        <a href="apropos.html">À propos</a>
+        <a href="index.html#contact" class="reserve-btn">Réserver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="services-page">
+    <div class="container">
+      <h1 class="page-title">Services offerts</h1>
+
+      <section class="services-grid">
+        <article class="service-card">
+          <img src="homework.png" alt="Illustration aide aux devoirs">
+          <h2>Aide aux devoirs</h2>
+          <div class="price">15,00$ à 20,00$</div>
+          <p class="desc">
+            Accompagnement pour les devoirs et les travaux en anglais : compréhension des consignes, révision des notions vues en classe et soutien pour compléter les exercices avec confiance.
+          </p>
+          <div class="durations">
+            30 min — 15,00$<br>
+            60 min — 20,00$
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="tutoring.png" alt="Illustration tutorat personnalisé">
+          <h2>Tutorat personnalisé</h2>
+          <div class="price">25,00$</div>
+          <p class="desc">
+            Séances adaptées aux besoins de l’élève pour améliorer la compréhension et l’expression orales et écrites, et renforcer les bases en anglais à son rythme.
+          </p>
+          <div class="durations">
+            60 min — 25,00$
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="exams.png" alt="Illustration préparation aux examens">
+          <h2>Préparation aux examens</h2>
+          <div class="price">30,00$</div>
+          <p class="desc">
+            Révision ciblée en vue des évaluations : pratique guidée, stratégies pour mieux répondre aux questions et consolidation des notions clés pour arriver prêt et confiant.
+          </p>
+          <div class="durations">
+            60 min — 30,00$
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <div class="footer-wave-wrap">
+      <svg class="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C240,0 420,0 720,45 C1010,90 1180,95 1440,40 L1440,120 L0,120 Z" fill="#3e73b9"></path>
+        <path d="M0,55 C250,15 430,20 720,60 C1010,100 1180,105 1440,55 L1440,120 L0,120 Z" fill="#262521"></path>
+      </svg>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        English That Clicks<br>with Sabrina
+      </div>
+
+      <div class="footer-contact">
+        sablap321@hotmail.com<br>
+        (418) 860-7227
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
