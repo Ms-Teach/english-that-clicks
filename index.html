@@ -1,89 +1,191 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>English That Clicks with Sabrina</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f7f7f7;
-            color: #333;
-        }
-        header {
-            background-color: #6fa8a3;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h2 {
-            color: #6fa8a3;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #ddd;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>English That Clicks with Sabrina</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #2b2926;
+      background: #f4efe4;
+    }
+
+    header {
+      background: #262521;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-style: italic;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .btn {
+      background: #8ebfc0;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: black;
+    }
+
+    /* HERO WITH YOUR IMAGE */
+    .hero {
+      height: 90vh;
+      background: url("hero-bg.png") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 60px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h2 {
+      font-size: 40px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+    }
+
+    .hero-text button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: 2px solid black;
+      border-radius: 20px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 60px;
+      background: #f4efe4;
+    }
+
+    .services h2 {
+      font-size: 35px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #e6d086;
+      padding: 60px;
+    }
+
+    .contact h2 {
+      font-size: 40px;
+      font-style: italic;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px solid #999;
+    }
+
+    button.submit {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 20px;
+    }
+
+    footer {
+      background: #262521;
+      color: white;
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+  </style>
 </head>
+
 <body>
 
 <header>
-    <h1>English That Clicks with Sabrina</h1>
-    <p>Des leçons d’anglais personnalisées, efficaces et sans stress</p>
+  <h1>English That Clicks with Sabrina</h1>
+  <nav>
+    <a href="#">Services</a>
+    <a href="#">À propos</a>
+    <a href="#" class="btn">Réserver</a>
+  </nav>
 </header>
 
-<section>
-    <h2>Qui suis-je ?</h2>
-    <p>
-        Future enseignante en anglais langue seconde, je possède une expérience concrète en milieu scolaire grâce à mes stages au secondaire.
-        Mon objectif est d’aider votre enfant à mieux comprendre l’anglais, à gagner en confiance et à progresser à son rythme.
-    </p>
+<section class="hero">
+  <div class="hero-text">
+    <p>L’anglais qui clique : des leçons personnalisées, efficaces et sans stress.</p>
+    <h2>Des leçons d’anglais personnalisées, amusantes et efficaces.</h2>
+    <p>Avec aide aux devoirs, tutorat et préparation aux examens.</p>
+    <button>Commencer</button>
+  </div>
 </section>
 
-<section>
-    <h2>Services</h2>
+<section class="services">
+  <h2>Services</h2>
 
+  <div class="cards">
     <div class="card">
-        <strong>Aide aux devoirs</strong>
-        <p>Durée flexible : 30 à 60 minutes selon les besoins.</p>
+      <h3>Aide aux devoirs</h3>
+      <p>30 min — 15$<br>60 min — 20$</p>
     </div>
 
     <div class="card">
-        <strong>Tutorat personnalisé</strong>
-        <p>Amélioration de la compréhension, de l’oral et de l’écrit.</p>
+      <h3>Tutorat</h3>
+      <p>60 min — 25$</p>
     </div>
 
     <div class="card">
-        <strong>Préparation aux examens</strong>
-        <p>Révision ciblée et stratégies pour réussir.</p>
+      <h3>Préparation aux examens</h3>
+      <p>60 min — 30$</p>
     </div>
+  </div>
 </section>
 
-<section>
-    <h2>Tarifs</h2>
-    <p>30 min — 15$</p>
-    <p>60 min — 25$</p>
-</section>
+<section class="contact">
+  <h2>Une question? Écrivez-moi!</h2>
 
-<section>
-    <h2>Contact</h2>
-    <p>Contactez-moi à : <strong>tonemail@example.com</strong></p>
+  <input type="text" placeholder="Nom">
+  <input type="email" placeholder="E-mail">
+  <textarea placeholder="Message"></textarea>
+
+  <button class="submit">Envoyer</button>
 </section>
 
 <footer>
-    <p>© English That Clicks with Sabrina</p>
+  <div>English That Clicks with Sabrina</div>
+  <div>sablap321@hotmail.com<br>(418) 860-7227</div>
 </footer>
 
 </body>
